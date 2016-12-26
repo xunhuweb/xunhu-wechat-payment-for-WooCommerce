@@ -9,13 +9,10 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
-Woocommerce微信支付宝免签约插件用于无法申请微信支付的用户使用，免签约免备案，WooCommerce立即接入微信收款，支持微信扫码支付，微信公众号支付。WeiXin Payments for WooCommerce is a Wordpress plugin that allows to accept payments at WooCommerce-powered online stores.
-
 == Description ==
-Your online store must use WooCommerce platform (free wordpress plugin).
-Once you installed and activated WooCommerce, you may install and activate WeChat Payments for WooCommerce.
+WooCommerce WeChat payment gateway, Support H5 In-App Web-based Payment (Official Account Payment), Don't need WeChat certification,Don't need the domain name registration.
 
-= Features=
+= Features = 
 * Support Wechat payment through scan QR code
 * Support H5 In-App Web-based Payment (Official Account Payment)
 * If payment completed,will automatically redirect to order recevied page
