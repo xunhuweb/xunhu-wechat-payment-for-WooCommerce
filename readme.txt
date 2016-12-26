@@ -1,4 +1,4 @@
-=== xunhu-wechat-payment-for-WooCommerce ===
+﻿=== xunhu-wechat-payment-for-WooCommerce ===
 Contributors: XunhuWeb
 Donate link: https://www.wpweixin.net/product/345.html
 Tags:weixin,wechat, wechatpay, wordpress plugin, payments, wechat payments, woocommerce
