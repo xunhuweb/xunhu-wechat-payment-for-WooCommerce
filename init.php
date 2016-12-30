@@ -25,16 +25,18 @@ function xh_wechat_payment_plugin_action_links($links) {
         'settings' => '<a href="' . admin_url ( 'admin.php?page=wc-settings&tab=checkout&section='.XH_Wechat_Payment_ID ) . '">'.__('Settings',XH_Wechat_Payment).'</a>'
     ), $links );
 }
+if(!class_exists('WC_Payment_Gateway')){
+    return;
+}
+
+require_once XH_Wechat_Payment_DIR.'/class-wechat-wc-payment-gateway.php';
+global $XH_Wechat_Payment_WC_Payment_Gateway;
+$XH_Wechat_Payment_WC_Payment_Gateway= new XH_Wechat_Payment_WC_Payment_Gateway();
 
 add_action('init', 'xh_wechat_payment_for_wc_notify',10);
 if(!function_exists('xh_wechat_payment_for_wc_notify')){
     function xh_wechat_payment_for_wc_notify(){
-        if(!class_exists('WC_Payment_Gateway')){
-            return;
-        }
-        
-        require_once XH_Wechat_Payment_DIR.'/class-wechat-wc-payment-gateway.php';
-        $XH_Wechat_Payment_WC_Payment_Gateway= new XH_Wechat_Payment_WC_Payment_Gateway();
+        global $XH_Wechat_Payment_WC_Payment_Gateway;
        
         $data = $_POST;
         if(!isset($data['hash'])
