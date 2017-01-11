@@ -56,7 +56,7 @@ class XH_Wechat_Payment_WC_Payment_Gateway extends WC_Payment_Gateway {
 		$data=array(
 		      'version'   => '1.0',//api version
 		      'lang'       => get_option('WPLANG','zh-cn'),   
-		      'plugins'   => $this->id,
+		      'plugins'   => 'woo-wechat',
 		      'appid'     => $this->get_option('appid'),
 		      'trade_order_id'=> $order_id,
 		      'payment'   => 'wechat',
