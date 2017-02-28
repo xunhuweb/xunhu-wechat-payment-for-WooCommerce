@@ -101,12 +101,8 @@ class XH_Wechat_Payment_WC_Payment_Gateway extends WC_Payment_Gateway {
 		if($expire_rate<=0){
 		    $expire_rate=1;
 		}
-		$home_url = rtrim(home_url());
-		$posi =strripos($home_url, '/');
-		if($posi!==false&&$posi>7){
-		    $home_url.='/';
-		}
-		$siteurl= $home_url;
+		
+		$siteurl = rtrim(home_url(),'/');
 		$total_amount     = round($order->get_total()*$expire_rate,2);		
 		$data=array(
 		      'version'   => '1.1',//api version
