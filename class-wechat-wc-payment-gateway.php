@@ -103,6 +103,12 @@ class XH_Wechat_Payment_WC_Payment_Gateway extends WC_Payment_Gateway {
 		}
 		
 		$siteurl = rtrim(home_url(),'/');
+		$posi =strripos($siteurl, '/');
+		//若是二级目录域名，需要以“/”结尾，否则会出现403跳转
+		if($posi!==false&&$posi>7){
+		    $siteurl.='/';
+		}
+		
 		$total_amount     = round($order->get_total()*$expire_rate,2);		
 		$data=array(
 		      'version'   => '1.1',//api version
